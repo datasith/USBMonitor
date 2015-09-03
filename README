@@ -1,1 +1,5 @@
-Monitors USB Devices being plugged in or out of the Raspberry Pi, and copies the contents of connected flash drives to a local folder automatically.
+Monitors USB Devices being plugged in or out of the Raspberry Pi, 
+and copies the contents of connected flash drives to a local folder 
+automatically.
+
+Please see INSTALL file for a quick rundown of how to use this utility.
