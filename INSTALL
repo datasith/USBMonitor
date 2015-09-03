@@ -1,0 +1,26 @@
+Clone this repo to any location on your Raspberry Pi.  I'll use for this example
+the home holder of the default user (pi):
+
+cd ~pi
+git clone https://github.com/themakerbro/USBMonitor
+
+Copy the sample configuration file:
+
+cd ~/USBMonitor
+cp config.json.sample config.json
+
+Add the following line to the rc.local file to run in the background after
+startup:
+
+env -i /usr/bin/python /home/pi/USBMonitor/main.py &
+
+Debug by running from the command line:
+
+sudo service rc.local start
+
+Connect and disconnect a USB flash drive, its contents will be copied to the
+XFER directory in this repository.  Any future copies will cleanout the contents of
+the XFER directory.
+
+Changes to the default names and options can be configured through the
+config.json file.
