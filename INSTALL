@@ -9,6 +9,10 @@ Copy the sample configuration file:
 cd ~/USBMonitor
 cp config.json.sample config.json
 
+Install required Python module:
+
+sudo pip install pyudev
+
 Add the following line to the rc.local file to run in the background after
 startup:
 
