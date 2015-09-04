@@ -68,6 +68,13 @@ def copyFiles(src,dst):
     p.wait()
     out, err = p.communicate()
 
+def changePermissions(user,directory):
+    p = subprocess.Popen(["chown","-R",user,directory],
+                         stderr=subprocess.STDOUT,
+                         stdout=subprocess.PIPE)
+    p.wait()
+    out, err = p.communicate()
+
 def loadConfig(fname):
     """ load a json config file, use *.sample if it does not exist """
     if not os.path.isfile(fname):

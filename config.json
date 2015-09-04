@@ -1,0 +1,11 @@
+{
+    "ownername":"pi",
+    "devicename":"Pi-Raspberry",
+    "devicerootpath":"/",
+    "xferdirectory":"XFER",
+    "tmpmountpoint":"MNT",
+    "automountretries":1,
+    "unmountretries":5,
+    "maxlogdelay":300,
+    "maxlogdelay_comment":"Send a log regardless of progress every x seconds"
+}

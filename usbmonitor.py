@@ -119,6 +119,9 @@ class USBMonitor:
             util.copyFiles(self.mountpoint, _xferdir)
             self.log.info("fileCopy|Files copied from {0} to {1}"
                       .format(self.mountpoint, _xferdir))
+            util.changePermissions(self.config['ownername'], _xferdir)
+            self.log.info("permissionsChanged|Changing owner of {0} to {1}"
+                      .format(_xferdir,self.config['ownername']))
         except IOError, e:
             self.log.error(e)
 
