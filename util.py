@@ -69,7 +69,7 @@ def copyFiles(src,dst):
     out, err = p.communicate()
 
 def changePermissions(user,directory):
-    p = subprocess.Popen(["chown","-R",user,directory],
+    p = subprocess.Popen(["chown","-R",user+':'+user,directory],
                          stderr=subprocess.STDOUT,
                          stdout=subprocess.PIPE)
     p.wait()
